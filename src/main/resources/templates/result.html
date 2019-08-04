@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Date Difference Result</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Date Difference</h1>
+    <p th:text="'Days between dates provided: ' + ${ourDate.dateDifference}" />
+    <p th:text="${ourDate.errorMessage}" />
+</body>
+</html>

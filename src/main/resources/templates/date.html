@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Date Difference Calculator</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"></link>
+<link rel="stylesheet" href="/resources/demos/style.css"></link>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+	$(function() {
+		$("#fromDatepicker").datepicker();
+	});
+
+	$(function() {
+		$("#toDatepicker").datepicker();
+	});
+</script>
+</head>
+<body>
+	<h1>Date Difference Calculator</h1>
+	<form action="#" th:action="@{/dateDiffFinder}" th:object="${ourDate}"
+		method="post">
+		<p>
+			From Date : <input type="text" id="fromDatepicker"
+				th:field="*{fromDate}" />
+		</p>
+		<p>
+			To Date : <input type="text" id="toDatepicker" th:field="*{toDate}" />
+		</p>
+		<p>
+			<input type="submit" value="Click me to find the days" />
+		</p>
+	</form>
+</body>
+</html>
